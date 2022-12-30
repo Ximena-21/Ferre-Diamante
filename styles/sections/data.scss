@@ -1,0 +1,92 @@
+@import "../vars.scss";
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 30px;
+
+  .cardData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+    & > * {
+      font-family: "Oswald", sans-serif;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__number {
+      font-size: 68px;
+      color: $main-yellow;
+      line-height: 1.2em;
+      font-weight: 600;
+    }
+
+    &__text {
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.8em;
+      color: $second-black;
+    }
+
+    &__subText {
+      font-size: 16px;
+      font-weight: 500;
+      color: $main-gray;
+      letter-spacing: 1.1px;
+      line-height: 1;
+    }
+
+    &__line {
+      background-color: $main-yellow;
+      height: 5px;
+      margin: 19px 0;
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .data {
+    flex-direction: row;
+    justify-content: space-around;
+    .cardData {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .data {
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .cardData {
+      width: 220px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .data {
+    position: absolute;
+    top: 655px;
+    padding: 30px 60px;
+    left: calc(50% - 390px);
+    z-index: 2;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .cardData {
+      padding: 10px;
+    }
+  }
+}
