@@ -57,7 +57,7 @@ export default function Footer() {
 
             </div>
             <div className="footer__copyright">
-                © Develop by JuanCJC, IsabelaJS XimenAnzola - All Rights Reserved
+                © Develop by XimenAnzola - All Rights Reserved
             </div>
         </footer>
     )

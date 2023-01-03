@@ -14,11 +14,10 @@ const Header = () => {
     //     </a>
     //   );
 
-
     return (
         <div className="header">
 
-            <div className="header__icon">
+            <div className="header__icon" onClick={openMenu}>
                 <svg className='menu' width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 1C0 0.734784 0.105357 0.48043 0.292893 0.292893C0.48043 0.105357 0.734784 0 1 0H19C19.2652 0 19.5196 0.105357 19.7071 0.292893C19.8946 0.48043 20 0.734784 20 1C20 1.26522 19.8946 1.51957 19.7071 1.70711C19.5196 1.89464 19.2652 2 19 2H1C0.734784 2 0.48043 1.89464 0.292893 1.70711C0.105357 1.51957 0 1.26522 0 1Z" fill="white" />
                     <path d="M0 7.032C0 6.76678 0.105357 6.51243 0.292893 6.32489C0.48043 6.13735 0.734784 6.032 1 6.032H19C19.2652 6.032 19.5196 6.13735 19.7071 6.32489C19.8946 6.51243 20 6.76678 20 7.032C20 7.29721 19.8946 7.55157 19.7071 7.73911C19.5196 7.92664 19.2652 8.032 19 8.032H1C0.734784 8.032 0.48043 7.92664 0.292893 7.73911C0.105357 7.55157 0 7.29721 0 7.032Z" fill="white" />
@@ -30,8 +29,7 @@ const Header = () => {
 
             </div>
             <div className="header__logo">
-                <Image src={logo} alt='logo'className="logo"/>
-                {/* <img src="../src/assets/logo.png" alt="" className="logo"> */}
+                <Image src={logo} alt='logo' className="logo" />
             </div>
             <nav id="menuHeader" className="header__menu">
                 <ul className="menu-container">
@@ -45,6 +43,19 @@ const Header = () => {
         </div>
 
     )
+}
+
+
+
+function openMenu() {
+    let menu : any = document.querySelector('#menuHeader')
+    menu.classList.toggle("menu--visibility")
+
+    let menuIcon : any = document.querySelector('.menu')
+    let closeIcon : any = document.querySelector('.close')
+      menuIcon.classList.toggle("hidden")
+      closeIcon.classList.toggle("hidden")
+
 }
 
 export default Header

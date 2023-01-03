@@ -1,4 +1,7 @@
 export default function Data() {
+
+
+    
     return (
         <section className="data">
             <div className="cardData">
